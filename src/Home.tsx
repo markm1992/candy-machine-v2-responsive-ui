@@ -273,9 +273,9 @@ const Home = (props: HomeProps) => {
     const [itemsRemaining, setItemsRemaining] = useState(0);
     const [isSoldOut, setIsSoldOut] = useState(false);
     const [payWithSplToken, setPayWithSplToken] = useState(false);
-    const [price, setPrice] = useState(0);
+    const [price, setPrice] = useState(1.5);
     const [priceLabel, setPriceLabel] = useState<string>("SOL");
-    const [whitelistPrice, setWhitelistPrice] = useState(0);
+    const [whitelistPrice, setWhitelistPrice] = useState(1.5);
     const [whitelistEnabled, setWhitelistEnabled] = useState(false);
     const [whitelistTokenBalance, setWhitelistTokenBalance] = useState(0);
     const [isEnded, setIsEnded] = useState(false);
@@ -532,15 +532,10 @@ const Home = (props: HomeProps) => {
         <main>
             <MainContainer>
                 <WalletContainer>
-                    <Logo><a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer"><img alt=""
-                                                                                                          src="logo.png"/></a></Logo>
+                    <Logo><img alt="" src="logo.png"/></Logo>
                     <Menu>
-                        <li><a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer">Menu 1</a>
+                        <li><a href="https://twomgame.com" target="_blank" rel="noopener noreferrer">Main Website</a>
                         </li>
-                        <li><a href="http://localhost:3000/" target="_blank"
-                               rel="noopener noreferrer">Menu 2</a></li>
-                        <li><a href="http://localhost:3000/" target="_blank"
-                               rel="noopener noreferrer">Menu 3</a></li>
                     </Menu>
                     <Wallet>
                         {wallet ?
@@ -548,22 +543,20 @@ const Home = (props: HomeProps) => {
                             <ConnectButton>Connect Wallet</ConnectButton>}
                     </Wallet>
                 </WalletContainer>
-                <ShimmerTitle>MINT IS LIVE !</ShimmerTitle>
+                <ShimmerTitle>This World of Mine Gen0 Mint!</ShimmerTitle>
                 <br/>
 
 
                 <MintContainer>
                     <DesContainer>
                         <NFT elevation={3}>
-                            <h2>My NFT</h2>
+                            <h2>Protorian EMU</h2>
                             <br/>
                             <div><Price
                                 label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)}/><Image
-                                src="cool-cats.gif"
+                                src="twom.gif"
                                 alt="NFT To Mint"/></div>
                             <br/>
-                            {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) &&
-                              <h3>You own {whitelistTokenBalance} WL mint {whitelistTokenBalance > 1 ? "tokens" : "token" }.</h3>}
                             {wallet && isActive && endDate && Date.now() < endDate.getTime() &&
                               <Countdown
                                 date={toDate(candyMachine?.state?.endSettings?.number)}
@@ -639,31 +632,21 @@ const Home = (props: HomeProps) => {
                     </DesContainer>
                     <DesContainer>
                         <Des elevation={2}>
-                            <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>TITLE 1</GoldTitle></LogoAligner>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
+                            <LogoAligner><img src="teg.png" alt=""></img><GoldTitle>This World of Mine</GoldTitle></LogoAligner>
+                            <p>This world of mine (TWoM) is a PvE 1-4 person Co-op game, utilizing a dungeon crawling<br/>
+                            mechanic and played as a 3rd person shooter. TWoM utilizes the Solana blockchain 
+                            <br/>for NFT characters and components as well as community and in game currency integration.</p>
+                            <p>Find out more from our whitepaper <a href="https://this-world-of-mine.gitbook.io/this-world-of-mine-whitepaper/">here on Gitbook</a>! <br/>We always suggest you do your research before investing in any project and team!</p>
                         </Des>
                         <Des elevation={2}>
-                            <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>TITLE 2</GoldTitle></LogoAligner>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                        </Des>
-                        <Des elevation={2}>
-                            <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>TITLE 3</GoldTitle></LogoAligner>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
+                            <LogoAligner><img src="teg.png" alt=""></img><GoldTitle>Short Term Utility</GoldTitle></LogoAligner>
+                            <p>Staking for $TEG will be released within one week of mint!</p>
+                            <p>Following staking you will have access to 
+                                <br/>- airdrops 
+                                <br/>- a TEG generating mini-game
+                                <br/>- Gen1 character creation
+                                <br/>- more! 
+                                </p><p>All of this will happen before our alpha game is released to you, <br/>our holders in 6 months from mint.</p>
                         </Des>
                     </DesContainer>
                 </MintContainer>

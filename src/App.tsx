@@ -89,6 +89,9 @@ const App = () => {
 
   return (
       <ThemeProvider theme={theme}>
+        <div className={'bg-container'}>
+          <img src={"desert_concept.jpg"} alt={"Background"} className={'background'}/>
+        </div>
         <ConnectionProvider endpoint={endpoint}>
           <WalletProvider wallets={wallets} autoConnect={true}>
             <WalletModalProvider>
